@@ -24,7 +24,7 @@ threadTres = threading.Thread(target=sumarTres, name='Sumar Tres')
 threadTres.start()
 threadCinco.start()
 
-threadTres.join()
-threadCinco.join()
+#threadTres.join()
+#threadCinco.join()
 
 logging.info(f'valor final {contador}')

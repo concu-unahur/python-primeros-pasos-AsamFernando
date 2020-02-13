@@ -21,40 +21,43 @@ def dormir():
 contador = Contador()
 
 # ejemplo clásico secuencial
-contador.iniciar()
+if __name__=='__operaNoConm__':
+  contador.iniciar()
 
-dormir()
-dormir()
+  dormir()
+  dormir()
 
-contador.finalizar()
-contador.imprimir()
+  contador.finalizar()
+  contador.imprimir()
 
-# ejemplo con threads
-contador.iniciar()
+  # ejemplo con threads
+  contador.iniciar()
 
-t1 = threading.Thread(target=dormir)
-t2 = threading.Thread(target=dormir)
+  t1 = threading.Thread(target=dormir)
+  t2 = threading.Thread(target=dormir)
 
-t1.start()
-t2.start()
+  t1.start()
+  t2.start()
 
-contador.finalizar()
-contador.imprimir()
+  contador.finalizar()
+  contador.imprimir()
 
-# ejemplo con threads, pero esperando que terminen
-contador.iniciar()
+  # ejemplo con threads, pero esperando que terminen
+  contador.iniciar()
 
-t1 = threading.Thread(target=dormir)
-t2 = threading.Thread(target=dormir)
+  t1 = threading.Thread(target=dormir)
+  t2 = threading.Thread(target=dormir)
 
-t1.start()
-t2.start()
+  t1.start()
+  t2.start()
 
-t1.join()
-t2.join()
+  t1.join()
+  t2.join()
 
-contador.finalizar()
-contador.imprimir()
+  contador.finalizar()
+  contador.imprimir()
+
+
 
 # Pregunta: ¿por qué los segundos que pasaron son 2, 0 y 1 respectivamente?
 # Pregunta: ¿cuántos hilos o threads hay en cada caso?
